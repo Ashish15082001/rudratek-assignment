@@ -138,7 +138,12 @@ export default function ProjectsTable() {
                   className="hover:bg-gray-50 transition cursor-pointer"
                 >
                   <td className="px-6 py-4 font-medium text-gray-800">
-                    {project.projectName || "—"}
+                    <div
+                      className="max-w-[200px] truncate"
+                      title={project.projectName}
+                    >
+                      {project.projectName || "—"}
+                    </div>
                   </td>
 
                   <td className="px-6 py-4 text-gray-600">

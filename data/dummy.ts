@@ -17,7 +17,7 @@ export enum ProjectStatus {
 export const dummyProjects: DummyProject[] = [
   {
     id: "1",
-    projectName: "Alpha CRM",
+    projectName: "Alpha CRsdfsdsd sdsd fsdf sd fsdf sd asd asd f sdf sdf M",
     clientName: "TechNova",
     status: ProjectStatus.active,
     startDate: "2024-01-15",
@@ -42,7 +42,7 @@ export const dummyProjects: DummyProject[] = [
   },
   {
     id: "4",
-    projectName: "Delta ERP",
+    projectName: "Delta ERPasd asasdasdsasadasd sa",
     clientName: "BuildMart",
     status: ProjectStatus.active,
     startDate: "2024-02-20",
