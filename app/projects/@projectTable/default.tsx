@@ -15,12 +15,12 @@ export default function ProjectsTable() {
   // Filter projects based on search and status
   const filteredProjects = dummyProjects.filter((project) => {
     const matchesSearch =
-      project.projectName.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      project.clientName.toLowerCase().includes(searchQuery.toLowerCase());
+      project.projectName?.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      project.clientName?.toLowerCase().includes(searchQuery.toLowerCase());
 
     const matchesStatus =
       selectedStatuses.length === 0 ||
-      selectedStatuses.includes(project.status);
+      (project.status && selectedStatuses.includes(project.status));
 
     return matchesSearch && matchesStatus;
   });
@@ -124,36 +124,47 @@ export default function ProjectsTable() {
                 <th className="px-6 py-3 font-medium text-gray-600">
                   Start Date
                 </th>
+                <th className="px-6 py-3 font-medium text-gray-600">
+                  End Date
+                </th>
               </tr>
             </thead>
 
             <tbody className="divide-y">
               {currentProjects.map((project) => (
                 <tr
-                  key={project.projectName}
+                  key={project.id}
                   onClick={() => router.push(`/projects/${project.id}`)}
                   className="hover:bg-gray-50 transition cursor-pointer"
                 >
                   <td className="px-6 py-4 font-medium text-gray-800">
-                    {project.projectName}
+                    {project.projectName || "—"}
                   </td>
 
                   <td className="px-6 py-4 text-gray-600">
-                    {project.clientName ?? "—"}
+                    {project.clientName || "—"}
                   </td>
 
                   <td className="px-6 py-4">
-                    <span
-                      className={`px-3 py-1 rounded-full text-xs font-medium ${getStatusStyle(
-                        project.status,
-                      )}`}
-                    >
-                      {project.status}
-                    </span>
+                    {project.status ? (
+                      <span
+                        className={`px-3 py-1 rounded-full text-xs font-medium ${getStatusStyle(
+                          project.status,
+                        )}`}
+                      >
+                        {project.status}
+                      </span>
+                    ) : (
+                      "—"
+                    )}
                   </td>
 
                   <td className="px-6 py-4 text-gray-600">
-                    {project.startDate ?? "—"}
+                    {project.startDate || "—"}
+                  </td>
+
+                  <td className="px-6 py-4 text-gray-600">
+                    {project.endDate || "—"}
                   </td>
                 </tr>
               ))}

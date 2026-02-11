@@ -1,11 +1,11 @@
 export interface DummyProject {
   id: string;
-  projectName: string;
-  clientName: string;
-  status: ProjectStatus;
-  startDate: string;
-  endDate: string;
-  remarks: string;
+  projectName?: string;
+  clientName?: string;
+  status?: ProjectStatus;
+  startDate?: string;
+  endDate?: string;
+  remarks?: string;
 }
 
 export enum ProjectStatus {
@@ -21,7 +21,6 @@ export const dummyProjects: DummyProject[] = [
     clientName: "TechNova",
     status: ProjectStatus.active,
     startDate: "2024-01-15",
-    endDate: "",
     remarks: "In progress, on track",
   },
   {
@@ -39,7 +38,6 @@ export const dummyProjects: DummyProject[] = [
     clientName: "InnoSoft",
     status: ProjectStatus.onHold,
     startDate: "2024-03-01",
-    endDate: "",
     remarks: "Awaiting client feedback",
   },
   {
@@ -48,16 +46,12 @@ export const dummyProjects: DummyProject[] = [
     clientName: "BuildMart",
     status: ProjectStatus.active,
     startDate: "2024-02-20",
-    endDate: "",
-    remarks: "Development phase",
   },
   {
     id: "5",
     projectName: "Epsilon App",
     clientName: "AppWorks",
-    status: ProjectStatus.active,
     startDate: "2024-04-11",
-    endDate: "",
     remarks: "Testing phase",
   },
   {
@@ -75,7 +69,6 @@ export const dummyProjects: DummyProject[] = [
     clientName: "MedCare",
     status: ProjectStatus.onHold,
     startDate: "2024-01-25",
-    endDate: "",
     remarks: "Resource constraints",
   },
   {
@@ -84,8 +77,6 @@ export const dummyProjects: DummyProject[] = [
     clientName: "EduSmart",
     status: ProjectStatus.active,
     startDate: "2024-06-01",
-    endDate: "",
-    remarks: "Ongoing development",
   },
   {
     id: "9",
@@ -102,7 +93,6 @@ export const dummyProjects: DummyProject[] = [
     clientName: "VisionLabs",
     status: ProjectStatus.active,
     startDate: "2024-05-07",
-    endDate: "",
     remarks: "Model training phase",
   },
 
@@ -111,9 +101,6 @@ export const dummyProjects: DummyProject[] = [
     projectName: "Lambda Cloud",
     clientName: "SkyNetics",
     status: ProjectStatus.onHold,
-    startDate: "2024-01-30",
-    endDate: "",
-    remarks: "Pending infrastructure setup",
   },
   {
     id: "12",
@@ -130,16 +117,13 @@ export const dummyProjects: DummyProject[] = [
     clientName: "ShopEase",
     status: ProjectStatus.active,
     startDate: "2024-02-01",
-    endDate: "",
     remarks: "Integration phase",
   },
   {
     id: "14",
-    projectName: "Xi Automation",
     clientName: "AutoTech",
     status: ProjectStatus.active,
     startDate: "2024-07-18",
-    endDate: "",
     remarks: "Early stage development",
   },
   {
@@ -157,8 +141,6 @@ export const dummyProjects: DummyProject[] = [
     clientName: "FleetOps",
     status: ProjectStatus.onHold,
     startDate: "2024-03-19",
-    endDate: "",
-    remarks: "Budget review",
   },
   {
     id: "17",
@@ -166,7 +148,6 @@ export const dummyProjects: DummyProject[] = [
     clientName: "SafeBank",
     status: ProjectStatus.active,
     startDate: "2024-01-05",
-    endDate: "",
     remarks: "Compliance check pending",
   },
   {
@@ -182,21 +163,16 @@ export const dummyProjects: DummyProject[] = [
     id: "19",
     projectName: "Tau Insights",
     clientName: "InsightIQ",
-    status: ProjectStatus.active,
     startDate: "2024-08-01",
-    endDate: "",
     remarks: "Analytics refinement",
   },
   {
     id: "20",
-    projectName: "Upsilon Security",
     clientName: "SecureIT",
     status: ProjectStatus.onHold,
     startDate: "2024-02-27",
-    endDate: "",
     remarks: "Security audit ongoing",
   },
-
   {
     id: "21",
     projectName: "Phi Logistics",
@@ -212,7 +188,6 @@ export const dummyProjects: DummyProject[] = [
     clientName: "PayWave",
     status: ProjectStatus.active,
     startDate: "2024-09-10",
-    endDate: "",
     remarks: "API integration ongoing",
   },
   {
@@ -221,7 +196,6 @@ export const dummyProjects: DummyProject[] = [
     clientName: "HealthSync",
     status: ProjectStatus.active,
     startDate: "2024-03-05",
-    endDate: "",
     remarks: "Regulatory compliance",
   },
   {
@@ -239,7 +213,6 @@ export const dummyProjects: DummyProject[] = [
     clientName: "ConstructCo",
     status: ProjectStatus.onHold,
     startDate: "2024-01-15",
-    endDate: "",
     remarks: "Awaiting design approval",
   },
   {
@@ -248,7 +221,6 @@ export const dummyProjects: DummyProject[] = [
     clientName: "CreativeX",
     status: ProjectStatus.active,
     startDate: "2024-04-29",
-    endDate: "",
     remarks: "Creative phase",
   },
   {
@@ -266,7 +238,6 @@ export const dummyProjects: DummyProject[] = [
     clientName: "EnergyPlus",
     status: ProjectStatus.active,
     startDate: "2024-05-22",
-    endDate: "",
     remarks: "System testing",
   },
   {
@@ -275,7 +246,6 @@ export const dummyProjects: DummyProject[] = [
     clientName: "DataBridge",
     status: ProjectStatus.onHold,
     startDate: "2024-01-12",
-    endDate: "",
     remarks: "Data migration delayed",
   },
   {
@@ -294,7 +264,6 @@ export const dummyProjects: DummyProject[] = [
     clientName: "MarketMinds",
     status: ProjectStatus.active,
     startDate: "2024-06-14",
-    endDate: "",
     remarks: "Data analysis phase",
   },
   {
@@ -312,7 +281,6 @@ export const dummyProjects: DummyProject[] = [
     clientName: "StarLabs",
     status: ProjectStatus.active,
     startDate: "2024-02-09",
-    endDate: "",
     remarks: "Satellite integration",
   },
   {
@@ -321,7 +289,6 @@ export const dummyProjects: DummyProject[] = [
     clientName: "HeavyMach",
     status: ProjectStatus.onHold,
     startDate: "2024-07-02",
-    endDate: "",
     remarks: "Equipment delivery pending",
   },
   {
@@ -339,7 +306,6 @@ export const dummyProjects: DummyProject[] = [
     clientName: "GeoTrack",
     status: ProjectStatus.active,
     startDate: "2024-08-20",
-    endDate: "",
     remarks: "Geospatial analysis",
   },
   {
@@ -348,7 +314,6 @@ export const dummyProjects: DummyProject[] = [
     clientName: "BioCore",
     status: ProjectStatus.onHold,
     startDate: "2024-05-13",
-    endDate: "",
     remarks: "Lab results pending",
   },
   {
@@ -366,7 +331,6 @@ export const dummyProjects: DummyProject[] = [
     clientName: "CapitalOneX",
     status: ProjectStatus.active,
     startDate: "2024-09-01",
-    endDate: "",
     remarks: "Portfolio optimization",
   },
   {
@@ -375,7 +339,6 @@ export const dummyProjects: DummyProject[] = [
     clientName: "DevSolutions",
     status: ProjectStatus.active,
     startDate: "2024-01-01",
-    endDate: "",
     remarks: "Infrastructure setup",
   },
 
@@ -394,7 +357,6 @@ export const dummyProjects: DummyProject[] = [
     clientName: "CareerBoost",
     status: ProjectStatus.onHold,
     startDate: "2024-03-23",
-    endDate: "",
     remarks: "Curriculum review",
   },
   {
@@ -403,7 +365,6 @@ export const dummyProjects: DummyProject[] = [
     clientName: "UrbanBuild",
     status: ProjectStatus.active,
     startDate: "2024-04-05",
-    endDate: "",
     remarks: "Module implementation",
   },
   {
@@ -421,7 +382,6 @@ export const dummyProjects: DummyProject[] = [
     clientName: "NetCloud",
     status: ProjectStatus.active,
     startDate: "2024-10-01",
-    endDate: "",
     remarks: "Cloud migration",
   },
   {
@@ -430,7 +390,6 @@ export const dummyProjects: DummyProject[] = [
     clientName: "LogiTrack",
     status: ProjectStatus.onHold,
     startDate: "2024-06-30",
-    endDate: "",
     remarks: "GPS calibration issue",
   },
   {
@@ -448,7 +407,6 @@ export const dummyProjects: DummyProject[] = [
     clientName: "EduNext",
     status: ProjectStatus.active,
     startDate: "2024-07-11",
-    endDate: "",
     remarks: "Course content creation",
   },
   {
@@ -457,7 +415,6 @@ export const dummyProjects: DummyProject[] = [
     clientName: "CyberSafe",
     status: ProjectStatus.active,
     startDate: "2024-08-15",
-    endDate: "",
     remarks: "Penetration testing",
   },
   {
