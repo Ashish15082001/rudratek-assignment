@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import "../globals.css";
+import "@/app/globals.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -18,21 +18,16 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({
-  projectDetail,
-  projectTable,
+  children,
 }: Readonly<{
-  projectDetail: React.ReactNode;
-  projectTable: React.ReactNode;
+  children: React.ReactNode;
 }>) {
   return (
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gradient-to-br from-blue-50 to-indigo-100`}
       >
-        <div className="flex h-screen">
-          <div className="w-1/2">{projectTable}</div>
-          <div className="w-1/2">{projectDetail}</div>
-        </div>
+        {children}
       </body>
     </html>
   );
