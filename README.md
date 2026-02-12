@@ -153,3 +153,7 @@ public/                      # Static assets
 - [React Documentation](https://react.dev)
 - [Tailwind CSS Documentation](https://tailwindcss.com/docs)
 - [Parallel Routes in Next.js](https://nextjs.org/docs/app/building-your-application/routing/parallel-routes)
+
+## AI Usage & Documentation
+
+For details on how AI tools were used to generate this documentation, what sections were created, and notes on design decisions, see [AI_USAGE.md](AI_USAGE.md).
